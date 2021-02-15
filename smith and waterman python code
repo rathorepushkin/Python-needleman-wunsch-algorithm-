@@ -1,7 +1,7 @@
+#____________________Pushkin Rathore_______#
+####----------------SMITH AND WATERMAN------#
 
-####----------------Smith and Waterman aglorithm by Pushkin Rathore-----------------####
 
-#Created by Bineet Kumar Mohanta
 
 # Importing Modules
 import numpy as np
@@ -81,4 +81,13 @@ while(ti >0 and tj > 0):
 print(aligned_1)
 print(aligned_2)
 
+aligned = []
+for window in range(len(aligned_1)):
+    for i in range(len(aligned_1)):
+        if(aligned_1[i:window+i] == aligned_2[i:window+i]):
+            aligned.append(aligned_1[i:window+i])
+        else: 
+            window = window+1
+aligned = max(aligned , key = len)
+print(aligned)
 # Working :)
