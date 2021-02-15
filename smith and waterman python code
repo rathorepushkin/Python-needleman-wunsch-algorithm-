@@ -1,5 +1,5 @@
-#____________________BIOINFORMATICA______________________#
-####----------------Needleman-Wunsch-----------------####
+
+####----------------Smith and Waterman aglorithm by Pushkin Rathore-----------------####
 
 #Created by Bineet Kumar Mohanta
 
@@ -21,7 +21,6 @@ match_checker_matrix = np.zeros((len(sequence_1),len(sequence_2)))
 match_reward = 1
 mismatch_penalty = -1
 gap_penalty = -2
-zero_penalty = 0
 
 #Fill the match checker matrix accrording to match or mismatch
 for i in range(len(sequence_1)):
